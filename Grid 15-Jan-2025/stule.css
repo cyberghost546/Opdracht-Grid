@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    gap: 2px;
+    grid-template-areas: 
+    "hd"
+    "nav"
+    "div1"
+    "div2"
+    "div3"
+    "ft"
+}
+
+.header{
+    grid-area: hd;
+    border: 2px solid rgb(18, 193, 216);
+}
+
+.nav{
+    grid-area: nav;
+    border: 1px solid rgb(18, 193, 216);
+}
+
+.div1{
+    grid-area: div1;
+    border: 2px solid rgb(25, 253, 0);
+}
+
+.div2{
+    grid-area: div2;
+    border: 2px solid rgb(0, 255, 21);
+}
+
+.div3{
+    grid-area: div3;
+    border: 2px solid rgb(0, 255, 26);
+}
+
+footer{
+    grid-area: ft;
+    border: 2px solid rgb(26, 6, 255);
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        text-align: center;
+        gap: 2px;
+        grid-template-areas: 
+        "hd"
+        "nav"
+        "div1"
+        "div2"
+        "div3"
+        "ft"
+    }
+}
+
+@media screen and (max-width: 786px) and (min-width: 481px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        text-align: center;
+        gap: 2px;
+        grid-template-areas: 
+        "hd hd"
+        "nav nav"
+        "div1 div1"
+        "div2 div3"
+        "ft  ft"
+    }
+
+    .footer{
+        grid-area: ft;
+    }
+
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1050px)  {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        gap: 2px;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "nav nav nav nav"
+        " . div1 div1 . "
+        " . div1 div1 . "
+        " . div2 div3 . "
+        " . div2 div3 . "
+        " ft ft ft ft "
+    }
+
+    .footer{
+        grid-area: ft;
+
+    }
+}
